@@ -3,24 +3,17 @@ package com.spendlens.api.dto.auth;
 import com.spendlens.api.constant.AppMessages;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class RegisterRequest {
-
-    @NotBlank(message = AppMessages.FULL_NAME_REQUIRED)
-    @Size(max = 100, message = AppMessages.FULL_NAME_MAX_LENGTH)
-    private String fullName;
+public class LoginRequest {
 
     @NotBlank(message = AppMessages.EMAIL_REQUIRED)
     @Email(message = AppMessages.EMAIL_INVALID)
-    @Size(max = 150, message = AppMessages.EMAIL_MAX_LENGTH)
     private String email;
 
     @NotBlank(message = AppMessages.PASSWORD_REQUIRED)
-    @Size(min = 6, message = AppMessages.PASSWORD_MIN_LENGTH)
     private String password;
 }
