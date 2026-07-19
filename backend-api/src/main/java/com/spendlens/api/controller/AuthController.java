@@ -1,6 +1,7 @@
 package com.spendlens.api.controller;
 
 import com.spendlens.api.dto.auth.AuthResponse;
+import com.spendlens.api.dto.auth.LoginRequest;
 import com.spendlens.api.dto.auth.RegisterRequest;
 import com.spendlens.api.service.AuthService;
 import jakarta.validation.Valid;
@@ -19,5 +20,10 @@ public class AuthController {
     @ResponseStatus(HttpStatus.CREATED)
     public AuthResponse register(@Valid @RequestBody RegisterRequest request) {
         return authService.register(request);
+    }
+
+    @PostMapping("/login")
+    public AuthResponse login(@Valid @RequestBody LoginRequest request) {
+        return authService.login(request);
     }
 }
