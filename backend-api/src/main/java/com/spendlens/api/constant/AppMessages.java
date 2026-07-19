@@ -14,6 +14,7 @@ public final class AppMessages {
     public static final String AUTHENTICATION_REQUIRED = "Authentication is required";
     public static final String ACCESS_DENIED = "Access denied";
     public static final String INVALID_OR_EXPIRED_TOKEN = "Invalid or expired token";
+    public static final String USER_NOT_FOUND = "User not found";
 
     // Validation
     public static final String VALIDATION_FAILED = "Validation failed";

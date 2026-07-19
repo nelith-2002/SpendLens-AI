@@ -21,4 +21,8 @@ public final class SecurityConstants {
             HEALTH_ENDPOINT,
             AUTH_API_PATTERN
     };
+
+    // Protected endpoints
+    public static final String USERS_API_BASE = "/api/users";
+    public static final String CURRENT_USER_PROFILE_ENDPOINT = "/me";
 }
